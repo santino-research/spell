@@ -6,11 +6,21 @@
 
 **The first programming language designed for AI.**
 
-SPELL is an AI-native dataflow language where computation is expressed as a graph of explicit dependencies. No sequential reasoning. No implicit state. Just structure that mirrors logic.
+---
 
-> *Explicit dependencies, explicit types, structured format.*
+Programming languages are abstractions designed for their authors.
 
-📄 [Read the Paper](https://zenodo.org/records/17826541) 
+When the author was human, the abstraction was **sequential**: statements execute in order, variables mutate over time, control flows through branches. Humans simulate the program mentally, step by step.
+
+LLMs are different. They generate through **pattern completion**, not sequential reasoning. There is no state tracking. There is no mental simulation. There is structure.
+
+**SPELL** is an abstraction for this new author: explicit dependencies, explicit types, structured format. The abstraction fits the mechanism.
+
+---
+
+> *The programming languages we use were designed for humans. What if we designed programming languages for LLMs?*
+
+📄 [Read the Paper](https://zenodo.org/records/17826541)
 
 ## Status
 
@@ -18,7 +28,7 @@ SPELL is an AI-native dataflow language where computation is expressed as a grap
 ⚠️  Pre-Alpha (v0.1)
 ```
 
-This is a minimal proof-of-concept demonstrating the core dataflow paradigm. The current implementation validates the fundamental architecture.
+This is a minimal proof-of-concept demonstrating the core paradigm. The current implementation validates the fundamental architecture.
 
 **Not yet implemented:** Extended operation set, file I/O, network operations, string manipulation, custom function definitions, error recovery.
 
@@ -104,12 +114,6 @@ See the [`examples/`](./examples) directory for complete programs:
 - `sales_analysis.json` — Filter and aggregate sales data
 - `statistics.json` — Calculate mean
 - `temperature_conversion.json` — Batch data transformation
-
-## Why SPELL?
-
-Programming languages are abstractions designed for authors. Traditional languages are designed for human authors who think sequentially and track state mentally.
-
-LLMs are different. They generate through pattern completion, not sequential reasoning. SPELL is an abstraction designed for this mechanism.
 
 ## Contact
 
