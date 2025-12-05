@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/spell.svg" alt="SPELL" width="100">
+</p>
+
 # SPELL
 
 **The first programming language designed for AI.**
@@ -6,6 +10,7 @@ SPELL is an AI-native dataflow language where computation is expressed as a grap
 
 > *Explicit dependencies, explicit types, structured format.*
 
+📄 [Read the Paper](https://zenodo.org/records/17826541) 
 
 ## Status
 
@@ -97,7 +102,7 @@ This minimal set is expressively complete for data transformations.
 See the [`examples/`](./examples) directory for complete programs:
 
 - `sales_analysis.json` — Filter and aggregate sales data
-- `statistics.json` — Calculate mean, variance, and standard deviation
+- `statistics.json` — Calculate mean
 - `temperature_conversion.json` — Batch data transformation
 
 ## Why SPELL?
@@ -106,6 +111,10 @@ Programming languages are abstractions designed for authors. Traditional languag
 
 LLMs are different. They generate through pattern completion, not sequential reasoning. SPELL is an abstraction designed for this mechanism.
 
+## Contact
+
+📧 [research@santino.world](mailto:research@santino.world)
+
 ## License
 
-MIT — [Santino Research] 2025
+MIT — [Santino Research]
