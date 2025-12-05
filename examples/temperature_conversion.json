@@ -1,0 +1,70 @@
+{
+    "temperatures": {
+        "op": "Const",
+        "value": {
+            "literal": [
+                22.5,
+                25.0,
+                18.3,
+                30.1,
+                15.8,
+                28.4,
+                20.0
+            ],
+            "type": "Array<Number>"
+        },
+        "returns": "Array<Number>"
+    },
+    "celsius_to_fahrenheit": {
+        "op": "Map",
+        "list": {
+            "ref": "temperatures",
+            "type": "Array<Number>"
+        },
+        "apply_op": {
+            "literal": "Mul",
+            "type": "String"
+        },
+        "arg": {
+            "literal": "a",
+            "type": "String"
+        },
+        "params": {
+            "literal": {
+                "b": 1.8
+            },
+            "type": "Any"
+        },
+        "returns": "Array<Number>"
+    },
+    "add_offset": {
+        "op": "Map",
+        "list": {
+            "ref": "celsius_to_fahrenheit",
+            "type": "Array<Number>"
+        },
+        "apply_op": {
+            "literal": "Add",
+            "type": "String"
+        },
+        "arg": {
+            "literal": "a",
+            "type": "String"
+        },
+        "params": {
+            "literal": {
+                "b": 32
+            },
+            "type": "Any"
+        },
+        "returns": "Array<Number>"
+    },
+    "result": {
+        "op": "Print",
+        "in": {
+            "ref": "add_offset",
+            "type": "Array<Number>"
+        },
+        "returns": "Array<Number>"
+    }
+}

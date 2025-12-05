@@ -1,0 +1,93 @@
+{
+    "sales": {
+        "op": "Const",
+        "value": {
+            "literal": [
+                120,
+                85,
+                200,
+                150,
+                90,
+                175,
+                220,
+                95
+            ],
+            "type": "Array<Number>"
+        },
+        "returns": "Array<Number>"
+    },
+    "high_sales": {
+        "op": "Filter",
+        "list": {
+            "ref": "sales",
+            "type": "Array<Number>"
+        },
+        "apply_op": {
+            "literal": "Gt",
+            "type": "String"
+        },
+        "arg": {
+            "literal": "a",
+            "type": "String"
+        },
+        "params": {
+            "literal": {
+                "b": 100
+            },
+            "type": "Any"
+        },
+        "returns": "Array<Number>"
+    },
+    "total": {
+        "op": "Reduce",
+        "list": {
+            "ref": "high_sales",
+            "type": "Array<Number>"
+        },
+        "apply_op": {
+            "literal": "Add",
+            "type": "String"
+        },
+        "initial": {
+            "literal": 0,
+            "type": "Number"
+        },
+        "acc_arg": {
+            "literal": "a",
+            "type": "String"
+        },
+        "item_arg": {
+            "literal": "b",
+            "type": "String"
+        },
+        "returns": "Number"
+    },
+    "count": {
+        "op": "Len",
+        "list": {
+            "ref": "high_sales",
+            "type": "Array<Number>"
+        },
+        "returns": "Number"
+    },
+    "average": {
+        "op": "Div",
+        "a": {
+            "ref": "total",
+            "type": "Number"
+        },
+        "b": {
+            "ref": "count",
+            "type": "Number"
+        },
+        "returns": "Number"
+    },
+    "result": {
+        "op": "Print",
+        "in": {
+            "ref": "average",
+            "type": "Number"
+        },
+        "returns": "Number"
+    }
+}

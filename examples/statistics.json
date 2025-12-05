@@ -1,0 +1,68 @@
+{
+    "values": {
+        "op": "Const",
+        "value": {
+            "literal": [
+                10,
+                20,
+                30,
+                40,
+                50
+            ],
+            "type": "Array<Number>"
+        },
+        "returns": "Array<Number>"
+    },
+    "sum": {
+        "op": "Reduce",
+        "list": {
+            "ref": "values",
+            "type": "Array<Number>"
+        },
+        "apply_op": {
+            "literal": "Add",
+            "type": "String"
+        },
+        "initial": {
+            "literal": 0,
+            "type": "Number"
+        },
+        "acc_arg": {
+            "literal": "a",
+            "type": "String"
+        },
+        "item_arg": {
+            "literal": "b",
+            "type": "String"
+        },
+        "returns": "Number"
+    },
+    "count": {
+        "op": "Len",
+        "list": {
+            "ref": "values",
+            "type": "Array<Number>"
+        },
+        "returns": "Number"
+    },
+    "mean": {
+        "op": "Div",
+        "a": {
+            "ref": "sum",
+            "type": "Number"
+        },
+        "b": {
+            "ref": "count",
+            "type": "Number"
+        },
+        "returns": "Number"
+    },
+    "result": {
+        "op": "Print",
+        "in": {
+            "ref": "mean",
+            "type": "Number"
+        },
+        "returns": "Number"
+    }
+}
